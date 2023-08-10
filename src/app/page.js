@@ -25,7 +25,7 @@ export default function HomePage() {
         />
 
         {/* Comment Example */}
-        {comments.map((c) => (
+        {/* {comments.map((c) => (
           <Comment
             userImagePath={c.userImagePath}
             username={c.username}
@@ -33,7 +33,7 @@ export default function HomePage() {
             likeNum={c.likeNum}
             replies={c.replies}
           />
-        ))}
+        ))} */}
       </div>
     </div>
   );
