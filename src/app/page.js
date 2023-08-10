@@ -3,6 +3,7 @@
 import { PostOwner } from "@/components/PostOwner";
 import { Comment } from "@/components/Comment";
 import { Reply } from "@/components/Reply";
+import { comments } from "@/libs/comments";
 
 export default function HomePage() {
   return (
@@ -24,35 +25,15 @@ export default function HomePage() {
         />
 
         {/* Comment Example */}
-        <Comment
-          userImagePath="/profileImages/lisa.jpg"
-          username="Lisa"
-          commentText="จริวค่า"
-          likeNum="999"
-          replies={[
-            {
-              username: "หมาน้อย",
-              userImagePath: "/profileImages/puppy.jpg",
-              replyText: "จริงค้าบบบบบบบบ",
-              likeNum: 0,
-            },
-            {
-              username: "Cat Meme",
-              userImagePath: "/profileImages/popcat.png",
-              replyText: "ลิซ่าาาาาาา",
-              likeNum: 2,
-            },
-          ]}
-        />
-
-        {/* map-loop render Comment component her */}
-        <Comment
-          username="Charlie Brown"
-          userImagePath="/profileImages/charliebrown.jpg"
-          commentText="บ้าไปแล้ว"
-          likeNum="0"
-          replies={[]}
-        />
+        {comments.map((c) => (
+          <Comment
+            userImagePath={c.userImagePath}
+            username={c.username}
+            commentText={c.commentText}
+            likeNum={c.likeNum}
+            replies={c.replies}
+          />
+        ))}
       </div>
     </div>
   );
