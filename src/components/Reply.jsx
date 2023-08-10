@@ -5,6 +5,7 @@ export const Reply = ({ userImagePath, username, replyText, likeNum }) => {
   } else {
     unlike = true;
   }
+
   return (
     <div>
       <div className="d-flex gap-2 my-2 ps-5">
