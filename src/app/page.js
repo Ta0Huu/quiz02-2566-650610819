@@ -45,7 +45,7 @@ export default function HomePage() {
           ]}
         />
 
-        {/* map-loop render Comment component here */}
+        {/* map-loop render Comment component her */}
         <Comment
           username="Charlie Brown"
           userImagePath="/profileImages/charliebrown.jpg"
