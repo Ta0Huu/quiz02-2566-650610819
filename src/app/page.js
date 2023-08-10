@@ -45,8 +45,6 @@ export default function HomePage() {
           ]}
         />
 
-        {/* Reply Example */}
-
         {/* map-loop render Comment component here */}
         <Comment
           username="Charlie Brown"
